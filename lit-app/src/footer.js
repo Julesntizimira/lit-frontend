@@ -33,7 +33,7 @@ export default function Footer () {
                
             </div>
             <div className="footer-bottom">
-                <p>Copyright © 1995-2024 eBay Inc. All Rights Reserved.</p>
+                <p>Copyright © 2024 lit App. All Rights Reserved.</p>
             </div>
         </footer>
     )

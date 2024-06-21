@@ -34,7 +34,7 @@ export const footerColumns = [
         title: "Stay connected",
         items: [
             {
-                name: "eBay's Blogs",
+                name: "lit's Blogs",
             },
             {
                 name: "Facebook",
