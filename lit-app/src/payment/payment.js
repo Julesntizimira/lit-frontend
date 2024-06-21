@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { cart } from "../utils";
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Payment() {
-    const [subTotal, setSubTotal] = useState(0);
+    const subTotal = 0;
     const tax = subTotal * 18 / 100;
     const shipping =  subTotal * 3 / 100;
     const total = subTotal + tax + shipping;

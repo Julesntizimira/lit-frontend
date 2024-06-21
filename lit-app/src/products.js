@@ -80,7 +80,8 @@ export default function Products () {
         }
     ]
     const [currentPage, setCurrentPage] = useState(1);
-    const [perPage, setPerPage] = useState(9);
+    // const [perPage, setPerPage] = useState(9);
+    const perPage = 9;
 
     const endIndex = currentPage * perPage;
     const startIndex = endIndex - perPage;
