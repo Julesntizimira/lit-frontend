@@ -113,6 +113,7 @@ nav, .add-section, .categories-section, .security, .path-container, .product-pag
 
 .heading {
   position: fixed;
+  top: 0;
   width: 100%;
   background-color: white;
   z-index: 100;
