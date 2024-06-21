@@ -8,11 +8,22 @@ export default function ProductFilter (props) {
     const [caretStyle, setCaretStyle ] = useState({
         transform: "rotate(0deg)"
     })
+    const [displayItems, setDisplayItems] = useState(items);
 
     useEffect (() => {
         setCaretStyle(prev => prev.transform === "rotate(0deg)" ? { transform: "rotate(180deg)"} : { transform: "rotate(0deg)" })
     }, [brandContentStyle])
 
+    function handleInputChange (event) {
+        const value = event.target.value;
+        const newItems = [];
+        for(let item of items) {
+            if(item.type.toLowerCase().includes(value.toLowerCase())) {
+                newItems.push(item)
+            } 
+        }
+        setDisplayItems(newItems)
+    }
     return (      
         <section className="filter">
             <h3 className="side-bar-section-title"
@@ -30,11 +41,14 @@ export default function ProductFilter (props) {
                     <i className="fa-solid fa-magnifying-glass"></i>
                     <input 
                         placeholder="Search"
+                        className="category-search"
+                        type="text"
+                        onChange={handleInputChange}
                     />
                 </div>
                 <div className="brands">
                     {
-                        items.map((item) => {
+                        displayItems.map((item) => {
                             return (
                                 <BrandContainer container={item} />  
                             )

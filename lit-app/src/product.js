@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Card from "./card";
-import Footer from "./footer";
-import Path from "./path";
+import Path from "./products/path";
 import { cards } from "./utils";
 
 export default function Product () {
@@ -439,8 +438,6 @@ export default function Product () {
                         </div>
                     </div>
                 </section>
-
-            <Footer />
         </>
      
     )

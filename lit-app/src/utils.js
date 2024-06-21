@@ -31,22 +31,6 @@ export const footerColumns = [
         ]
     },
     {
-        title: "Stay connected",
-        items: [
-            {
-                name: "lit's Blogs",
-            },
-            {
-                name: "Facebook",
-                icon: "facebook"
-            },
-            {
-                name: "Twitter",
-                icon: "twitter"
-            },
-        ]
-    },
-    {
         title: "Help & Contact",
         items: [
             {
@@ -2042,3 +2026,63 @@ export const cart = [
     image_url: "images/cards/iwatch.png",
   },
 ]
+
+export const categories = [
+  {
+      image_url: "luxury.jpg",
+      categoryName: "Luxury"
+  },
+  {
+      image_url: "sneakers.jpg",
+      categoryName: "Sneakers"
+  },
+  {
+      image_url: "P&A.jpg",
+      categoryName: "P&A"
+  },
+  {
+      image_url: "Refurbished.jpg",
+      categoryName: "Refurbished"
+  },
+  {
+      image_url: "cards.jpg",
+      categoryName: "Trading cards"
+  },
+  {
+      image_url: "preloved.jpg",
+      categoryName: "Pre-loved Luxury"
+  },
+  {
+      image_url: "toys.jpg",
+      categoryName: "Toys"
+  }
+]
+export const addOne = {
+  title: "On the road in comfort and style",
+  paragraph: "Equip your vehicle for the adventure of a lifetime.",
+  btnContent: "Shop now",
+  backgroundColor: "#93c9ff",
+  textColor:  "#003060",
+  btnStyle: {
+      color: "#003060",
+  },
+  btnHoverStyle: {
+      backgroundColor: "#003060",
+      color: "#a4b8cc"
+  }
+}
+export const addtwo = {
+  title: "Save on quality with refurbished",
+  paragraph: "Create your dream home on a budget with trusted brands.",
+  image_url: "cleaning.jpeg",
+  btnContent: "Shop now",
+  backgroundColor: "rgba(0, 0, 0, 0.037)",
+  textColor:  "black",
+  btnStyle: {
+      color: "black",
+  },
+  btnHoverStyle: {
+      backgroundColor: "black",
+      color: "white"
+  }
+}
