@@ -155,15 +155,19 @@ export default function NavigationBar () {
                 {
                     navItems.map((item) => {
                         return (
-                            <li>
+                            <li  onClick={() => {
+                                setMenuDropDown(prev => prev === "none" ? "flex" : "none");
+                            }}>
                                 <Link to="/">{item.category}</Link>
                             </li>
                         )
                     })
                 }
-                 <li>
-                                    <Link to="products">products</Link>
-                                </li>
+                 <li onClick={() => {
+                        setMenuDropDown(prev => prev === "none" ? "flex" : "none");
+                    }}>
+                    <Link to="products">products</Link>
+                </li>
             </ul>
         </nav>
     )
