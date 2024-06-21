@@ -483,9 +483,8 @@ footer {
   gap: 3rem;
 }
 .footer-link {
-  font-family: lato, sans-serif;
-  font-weight: 300;
-  color: rgb(210, 210, 210);
+  font-weight: lighter;
+  color: rgb(191, 191, 191);
   font-size: 12px;
 
 }
@@ -512,7 +511,6 @@ footer {
 .footer-bottom p{
   color: var(--text-color);
   font-size: 10px;
-  font-family: lato, sans-serif;
   font-weight: 300;
 }
 
