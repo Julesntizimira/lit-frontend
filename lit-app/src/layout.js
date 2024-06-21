@@ -1,8 +1,12 @@
+
 import AddSection from "./addSection";
 import CategoryContainer from "./categoryContainer";
 import Footer from "./footer";
-import NavigationBar from "./navigationBar";
-import SearchBar from "./searchBar";
+import NavigationBar from "./heading/navigationBar";
+import SearchBar from "./heading/searchBar";
+import PromotionAdd from "./heading/promotionAdd";
+import Card from "./card";
+import { cards } from "./utils";
 
 export default function Layout () {
     const categories = [
@@ -66,9 +70,13 @@ export default function Layout () {
     }
     return (
         <>
-            <SearchBar />
-            <NavigationBar />
-            <main>
+            <div className="heading">
+                <PromotionAdd />
+                <SearchBar />
+                <NavigationBar />
+            </div>
+         
+            <main className="layout-main">
                 <AddSection container={addOne}/>
                 <section className="categories-section">
                     <div className="categories-section-container">
@@ -85,7 +93,57 @@ export default function Layout () {
                         </div>
                     </div>
                 </section>
+                <section className="categories-section">
+                    <div className="categories-section-container">
+                        <h2>Best Selling Products</h2>
+                
+                        <div className="categories-wrapper">
+                            {
+                                cards.map((card) => {
+                                    return(
+                                        <Card container={card}/>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </section>
                 <AddSection container={addtwo} />
+             
+                <section className="security">
+                    <div className="security-section-wrapper">
+                        <div className="security-container">
+                            <div className="security-icon-cont">
+                                <img src="images/security/delivery.png" alt="icon"/>
+                            </div>
+                            <div className="security-content">
+                                <h3>FREE AND FAST DELIVERY</h3>
+                                <p>Free deleivery for all orders over $140</p>
+                            </div>
+                        
+                        </div>
+                        <div className="security-container">
+                            <div className="security-icon-cont">
+                                <img src="images/security/support.png" alt="icon"/>
+                            </div>
+                            <div className="security-content">
+                                <h3>24/7 CUSTOMER SERVICES</h3>
+                                <p>Friendly 24/7 customer support</p>
+                            </div>
+                       
+                        </div>
+                        <div className="security-container">
+                            <div className="security-icon-cont">
+                                <img src="images/security/secure.png" alt="icon"/>
+                            </div>
+                            <div className="security-content">
+                                <h3>MONEY BACK GUARANTY</h3>
+                                <p>We return money within 30 days</p>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </section>
                 <Footer/>
             </main>
         </>

@@ -11,6 +11,7 @@ export default function AddSection(props) {
             <div className="add-container" style={{
                 backgroundColor: backgroundColor
             }}>
+                <div className="add-img-cont" style={addImageContStyle}></div>
                 <div 
                     className="add-section-content"
                     style={{
@@ -29,7 +30,7 @@ export default function AddSection(props) {
                         }}
                     >{btnContent}</button>
                 </div>
-                <div className="add-img-cont" style={addImageContStyle}></div>
+           
             </div>
         </section>
     )
