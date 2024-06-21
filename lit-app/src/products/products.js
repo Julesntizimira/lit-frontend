@@ -155,7 +155,9 @@ export default function Products () {
                             <i className="fa-solid fa-angle-up"></i>
                         </h3>
                     </section>
-                    <button className="apply-btn">Apply</button>
+                    <button className="apply-btn" onClick={() => {
+                        setSideBarVisible(prev => prev === "" ? "visible" : "");
+                    }}>Apply</button>
                 </div>
 
                 <div className={`right-container ${sidebarVisible === "visible" ? "invisible" : ""}`}>

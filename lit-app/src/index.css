@@ -1003,7 +1003,11 @@ footer {
   height: 48px;
   border-radius: 8px;
   font-weight: 14px;
+  display: none;
 }
+
+
+
 
 /* product page*/
 .product-images {
@@ -1345,6 +1349,7 @@ footer {
   overflow: hidden;
   transition: 0.3s ease-in-out;
 }
+
 
 
 
@@ -1889,6 +1894,9 @@ footer {
     }
     .right-container.invisible {
       display: none;
+    }
+    .apply-btn {
+      display: block;
     }
 }
 @media (max-width: 600px) {
