@@ -130,6 +130,7 @@ export default function NavigationBar () {
                                             </li>
                                         )
                                     })
+                                    
                                 }
                             </ul>
                         </li>
@@ -160,6 +161,9 @@ export default function NavigationBar () {
                         )
                     })
                 }
+                 <li>
+                                    <Link to="products">products</Link>
+                                </li>
             </ul>
         </nav>
     )
