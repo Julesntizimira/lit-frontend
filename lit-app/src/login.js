@@ -13,28 +13,22 @@ export default function Login() {
             <div className="form-wrapper">
                 <h1>Login</h1>
                 
-                <form>
-                    <label htmlFor="email"> Email
-                    <div>
-                        <i className="fa-regular fa-envelope"></i>
+                <form className="login-register-form">
+                    <label htmlFor="email">
                         <input 
                             id="email"
                             type="email"
                             name="name"
-                            placeholder="Type your email"
+                            placeholder="Email"
                             required
                         />
-                    </div>
-                     
                     </label>
-                    <label htmlFor="password"> Password
-                        <div>
-                            <i className="fa-solid fa-lock"></i>
+                    <label htmlFor="password">
                             <input 
                                     id="password"
                                     type={passwordType}
                                     name="password"
-                                    placeholder="Type your password"
+                                    placeholder="Password"
                                     required
                             />
                             <i className={`fa-regular ${passwordEye}`}
@@ -50,7 +44,6 @@ export default function Login() {
                                     cursor: "pointer"
                                 }}
                             ></i>
-                        </div>
                     </label>
                     <button>Login</button>
                 </form>

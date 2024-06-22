@@ -568,36 +568,45 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 3rem;
+  padding: 0rem 3rem;
   gap: 1rem
 }
 .login-page-wrapper form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
 }
-.login-page-wrapper  label {
+/* .login-page-wrapper  label {
   font-size: 14px;
   padding: 0.5rem 0;
   font-family: lato, sans-serif;
   font-weight: 600;
-  border-bottom: 1px solid black;
-}
-.login-page-wrapper label > div {
-  padding-left: 0.5rem;
+} */
+.login-page-wrapper label {
+  height: 56px;
+  width: 435px;
+  max-width: 100%;
+  padding: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: 300px;
+  background-color: #F6F6F6;
+  border-radius: 7px;
 }
-.login-page-wrapper label > div > input {
-  height: 2.3rem;
+
+
+.login-page-wrapper label > input {
   width: 100%;
   border: none;
   outline: none;
   font-size: 14px;
+  color: #5a5a5a;
+  background-color: transparent;
 }
-.login-page-wrapper label > div > i {
+
+.login-page-wrapper label > i {
   font-size: 14px;
   color: rgb(119, 119, 119);
 }
@@ -611,14 +620,14 @@ footer {
 }
 .login-page-wrapper form button {
   margin-top: 2rem;
-  padding: 0.5rem 2rem;
   color: rgb(218, 218, 218);
-  background-color: var(--red-color);
+  background-color: black;
   color: var(--white-color);
   border: none;
   cursor: pointer;
   border-radius: 5px;
   width: 100%;
+  height: 56px;
 }
 .login-page-wrapper .login-btn-cont a{
   color: var(--red-color);
@@ -1810,6 +1819,7 @@ footer {
   .review-section,
   .cart-section,
   .payment-steps-wrapper,
+  .form-wrapper,
   footer{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1852,6 +1862,7 @@ footer {
   .review-section,
   .cart-section,
   .payment-steps-wrapper,
+  .form-wrapper,
   footer{
     padding-left: 1rem;
     padding-right: 1rem;

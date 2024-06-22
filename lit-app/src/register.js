@@ -24,47 +24,36 @@ export default function Register() {
             <div className="form-wrapper">
                 <h1>Sign Up</h1>
                 
-                <form>
-                    <label htmlFor="firstname"> Firstname
-                        <div>
-                            <i class="fa-regular fa-user"></i>
+                <form className="login-register-form">
+                    <label htmlFor="firstname">
                             <input 
                                 id="firstname"
                                 type="text"
                                 name="name"
-                                placeholder="Type your firstname"
+                                placeholder="Firstname"
                                 required
                             />
-
-                        </div>
                     </label>
-                    <label htmlFor="lastname"> Lastname
-                        <div>
-                            <i class="fa-regular fa-user"></i>
+                    <label htmlFor="lastname">
                             <input 
                                 id="lastname"
                                 type="text"
                                 name="name"
-                                placeholder="Type your lastname"
+                                placeholder="Lastname"
                                 required
                             />
-                        </div>
                     </label>
 
-                    <label htmlFor="email"> Email
-                        <div>
-                            <i className="fa-regular fa-envelope"></i>
-                            <input 
-                                id="email"
-                                type="email"
-                                name="name"
-                                placeholder="Type your email"
-                                required
-                            />
-                        </div>
+                    <label htmlFor="email">
+                        <input 
+                            id="Email"
+                            type="email"
+                            name="name"
+                            placeholder="Email"
+                            required
+                        />
                     </label>
-                    <label htmlFor="phone"> Telphone
-                        <div>
+                    <label htmlFor="phone">
                             <div 
                                 className="countryCode"
                                 onClick={ () => {
@@ -106,42 +95,36 @@ export default function Register() {
                                 placeholder="787 354 546"
                                 required
                             />
-                        </div>
                     </label>
 
-                    <label htmlFor="password"> Password
-                        <div>
-                            <i class="fa-solid fa-lock"></i>
-                            <input 
-                                    id="password"
-                                    type={passwordType}
-                                    name="password"
-                                    placeholder="Type your password"
-                                    required
-                            />
-                            <i class={`fa-regular ${passwordEye}`}
-                                onClick={() => {
-                                    setPasswordType((prev) => {
-                                        return prev === "password" ? "text" : "password"
-                                    })
-                                    setPasswordEye((prev) => {
-                                        return prev === "fa-eye" ? "fa-eye-slash" : "fa-eye"
-                                    })
-                                }}
-                                style={{
-                                    cursor: "pointer"
-                                }}
-                            ></i>
-                        </div>
+                    <label htmlFor="password">
+                        <input 
+                                id="password"
+                                type={passwordType}
+                                name="password"
+                                placeholder="Password"
+                                required
+                        />
+                        <i class={`fa-regular ${passwordEye}`}
+                            onClick={() => {
+                                setPasswordType((prev) => {
+                                    return prev === "password" ? "text" : "password"
+                                })
+                                setPasswordEye((prev) => {
+                                    return prev === "fa-eye" ? "fa-eye-slash" : "fa-eye"
+                                })
+                            }}
+                            style={{
+                                cursor: "pointer"
+                            }}
+                        ></i>
                     </label>
-                    <label htmlFor="confirm_password"> Confirm Password
-                        <div>
-                            <i class="fa-solid fa-lock"></i>
+                    <label htmlFor="confirm_password">
                             <input 
                                     id="confirm_password"
                                     type={passwordTypeConfirm}
                                     name="confirm_password"
-                                    placeholder="Type your password"
+                                    placeholder="Confirm Password"
                                     required
                                 />
                             <i class={`fa-regular ${confirmPasswordEye}`}
@@ -157,7 +140,6 @@ export default function Register() {
                                     cursor: "pointer"
                                 }}
                             ></i>
-                        </div>
                     </label>
                     <button>Register</button>
                 </form>
