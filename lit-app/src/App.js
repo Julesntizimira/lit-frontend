@@ -9,7 +9,7 @@ import PaymentSteps from "./payment/paymentSteps";
 import SelectAddress from "./payment/selectAddress";
 import Shipping from "./payment/shipping";
 import Payment from "./payment/payment";
-import CreditCard from "./payment/creditcard";
+import CreditCard from "./paymentMehods/creditcard";
 import Home from "./home/home";
 
 export default function App() {

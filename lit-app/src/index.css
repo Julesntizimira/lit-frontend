@@ -82,7 +82,8 @@ nav,
 .payment-tabs,
 .social-media-logos,
 .top-part-filter-rating,
-.go-to-filters
+.go-to-filters,
+.payment-tab-img-cont
 /* .left-side-to-filter,
 .right-side-to-rating */
 {
@@ -1644,9 +1645,11 @@ footer {
 .payment-section {
   gap: 4rem;
   align-items: start;
+  width: 1088px;
+  max-width: 100%;
 }
 .payment-left-side {
-  width: 512px;
+  width: 100%;
   align-items: start;
   gap: 1rem;
 }
@@ -1689,7 +1692,7 @@ footer {
 }
 
 .payment-right-side{
-  width: 512px;
+  width: 100%;
   gap: 2rem;
   align-items: start;
 }
@@ -1730,7 +1733,14 @@ footer {
   border-bottom: 1px solid black;
 }
 
-
+.payment-tab-img-cont {
+  width: 4rem;
+  height: 48px;
+}
+.payment-tab-img-cont img {
+  width: 100%;
+  object-fit: contain;
+}
 
 
 /* responsiveness */
@@ -1935,6 +1945,13 @@ footer {
   /* path */
   .path-container {
     display: none;
+  }
+
+
+  /*paymentsteps*/
+  /*payment step*/
+  .payment-section{
+    flex-direction: column;
   }
 
 }
