@@ -446,7 +446,7 @@ nav > svg {
   gap: 0.5rem;
   cursor: pointer;
   min-width: 85px;
-
+  height: 100%;
 }
 
 .category-img-cont {
@@ -2052,6 +2052,9 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  .category-container{
+    /* width: 85px; */
+  }
   .card-container {
     width: 164px;
     min-width: 164px;
