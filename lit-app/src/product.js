@@ -10,7 +10,8 @@ export default function Product () {
     const [overlayerStle, setOverlayerStyle] = useState(normalOverlayerStyle);
     const [reviewsHeight, setReviewsHeight] = useState("856px");
     const [viewMoreBtn, setViewMoreBtn] = useState("View More");
-     
+    
+    const [imgPath, setImgPath] = useState("img")
     return (
         <>
             <Path container={{path: [
@@ -22,21 +23,33 @@ export default function Product () {
             <section className="single-product-page-wrapper">
                 <div className="product-images">
                     <div className="small-images"> 
-                        <div className="small-product-img">
+                        <div className="small-product-img" onClick={() => {
+                            setImgPath("img")
+                        }}>
                             <img src="images/productPage/img.png" alt="small-img"/>
                         </div>
-                        <div className="small-product-img">
-                            <img src="images/productPage/img.png" alt="small-img"/>
+
+                        <div className="small-product-img" onClick={() => {
+                            setImgPath("img2")
+                        }}>
+                            <img src="images/productPage/img2.png" alt="small-img"/>
                         </div>
-                        <div className="small-product-img">
-                            <img src="images/productPage/img.png" alt="small-img"/>
+
+                        <div className="small-product-img" onClick={() => {
+                            setImgPath("img3")
+                        }}>
+                            <img src="images/productPage/img3.png" alt="small-img"/>
                         </div>
-                        <div className="small-product-img">
-                            <img src="images/productPage/img.png" alt="small-img"/>
+
+                        <div className="small-product-img" onClick={() => {
+                            setImgPath("img4")
+                        }}>
+                            <img src="images/productPage/img4.png" alt="small-img"/>
                         </div>
+
                     </div>
                     <div className="big-image-cont">
-                        <img src="images/productPage/img.png" alt="small-img"/>
+                        <img src={`images/productPage/${imgPath}.png`} alt="big-img"/>
                     </div>
                 </div>
                 <div className="product-content">
