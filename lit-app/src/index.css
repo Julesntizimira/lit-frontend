@@ -1599,6 +1599,7 @@ footer {
 .back-btn {
   background-color: transparent;
   border: 1px solid black;
+  color: black;
 }
 .next-btn {
   background-color: black;
