@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Footer from "./footer";
-import PromotionAdd from "./heading/promotionAdd";
 import { useState } from "react";
 
 export default function Login() {
@@ -8,8 +6,6 @@ export default function Login() {
     const [passwordEye, setPasswordEye] = useState("fa-eye");
 
     return (
-        <>
-        <PromotionAdd />
         <div className="login-page-wrapper">
             <div className="login-img-cont">
                 <img src="images/login/loginImage.png" alt=""/>
@@ -78,7 +74,5 @@ export default function Login() {
                
             </div>
         </div>
-        <Footer />
-        </>
     )
 }

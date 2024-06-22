@@ -556,7 +556,7 @@ footer {
   padding: 3rem 0;
 }
 .login-img-cont {
-  width: 50%;
+  width: 100%
 }
 .login-img-cont img{
   width: 100%;
@@ -567,7 +567,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   padding: 3rem;
   gap: 1rem
 }
@@ -1439,6 +1439,9 @@ footer {
   flex-direction: column;
   gap: 0.3rem;
 }
+.cart-product-name {
+  cursor: pointer;
+}
 .cart-product-details {
   gap: 1rem;
   width: 250px;
@@ -2028,6 +2031,9 @@ footer {
   }
   .method-container {
     height: auto;
+  }
+  .login-img-cont {
+    display: none;
   }
 }
 @media (max-width: 600px) {

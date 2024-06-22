@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -6,6 +7,11 @@ export default function CartProductContainer (props) {
     const {description, type, price, image_url, currency} = props.container
     const {setSubTotal} = props
     const [count, setCount] = useState(1);
+
+    const navigate = useNavigate();
+    const handleProductClick = () => {
+      navigate("/product");
+    };
 
     return (
         <div className="cart-product-container">
@@ -15,7 +21,7 @@ export default function CartProductContainer (props) {
 
             <div className="cart-product-content">
                 <div className="cart-product-details">
-                    <div className="cart-product-name">
+                    <div className="cart-product-name" onClick={handleProductClick}>
                         <p>{description}</p>
                         <p>{type}</p>
                     </div>

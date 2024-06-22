@@ -30,9 +30,10 @@ export default function App() {
                 <Route path="mobilemoney" element={<CreditCard />}/>
               </Route>
             </Route>
+            <Route path="login" element={<Login />}/>
+            <Route path="register" element={<Register />}/>
         </Route>
-        <Route path="/login" element={<Login />}/>
-        <Route path="/register" element={<Register />}/>
+        
        
       </Routes>
     </BrowserRouter>

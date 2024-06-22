@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
-import Footer from "./footer";
-import PromotionAdd from "./heading/promotionAdd";
 import { useState } from "react";
 import { countryCode } from "./utils";
-import SearchBar from "./heading/searchBar";
-import NavigationBar from "./heading/navigationBar";
+
 
 export default function Register() {
     const [passwordType, setPasswordType] = useState("password");
@@ -19,10 +16,7 @@ export default function Register() {
 
   
     return (
-        <> 
-        <PromotionAdd />
-        <SearchBar />
-        <NavigationBar />
+   
         <div className="login-page-wrapper">
             <div className="login-img-cont">
                 <img src="images/login/loginImage.png" alt=""/>
@@ -187,7 +181,5 @@ export default function Register() {
                
             </div>
         </div>
-        <Footer />
-        </>
     )
 }
