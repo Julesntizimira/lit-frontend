@@ -109,7 +109,10 @@ export default function Product () {
                     </p>
                     <div className="product-buttons">
                         <button className="wish-btn">Add to Wishlist</button>
-                        <button className="cart-btn">Add to Cart</button>
+                        <button className="wish-btn">Add to Cart</button>
+                    </div>
+                    <div className="product-buttons">
+                        <button className="cart-btn">Buy Now</button>
                     </div>
                     <div className="features">
                         <div className="feature-container">

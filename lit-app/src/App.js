@@ -21,18 +21,19 @@ export default function App() {
             <Route path="products" element={<Products />}/>
             <Route path="product" element={<Product />}/>
             <Route path="cart" element={<Cart />}/>
+            <Route path="payment" element={<PaymentSteps />}>
+              <Route index element={<SelectAddress />}/>
+              <Route path="shipping" element={<Shipping />}/>
+              <Route path="payment" element={<Payment />}>
+                <Route index element={<CreditCard />}/>
+                <Route path="paypal" element={<CreditCard />}/>
+                <Route path="mobilemoney" element={<CreditCard />}/>
+              </Route>
+            </Route>
         </Route>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
-        <Route path="/payment" element={<PaymentSteps />}>
-          <Route index element={<SelectAddress />}/>
-          <Route path="shipping" element={<Shipping />}/>
-          <Route path="payment" element={<Payment />}>
-            <Route index element={<CreditCard />}/>
-            <Route path="paypal" element={<CreditCard />}/>
-            <Route path="mobilemoney" element={<CreditCard />}/>
-          </Route>
-        </Route>
+       
       </Routes>
     </BrowserRouter>
   );

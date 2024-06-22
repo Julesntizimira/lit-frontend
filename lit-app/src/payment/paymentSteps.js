@@ -1,5 +1,4 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Footer from "../footer";
 
 export default function PaymentSteps() {
     return (
@@ -72,7 +71,6 @@ export default function PaymentSteps() {
             </div>
             <Outlet />
         </div>
-        <Footer />
         </>
     )
 }
