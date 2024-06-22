@@ -28,6 +28,10 @@ button {
   color: black;
 }
 
+input:focus {
+  transition: none; /* or specify desired transition */
+}
+
 nav, 
 .nav-items,
 .search-bar-wrapper,
