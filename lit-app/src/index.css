@@ -18,9 +18,14 @@
 }
 
 
+
 /* universal */
 ul {
   list-style: none;
+}
+
+button {
+  color: black;
 }
 
 nav, 
