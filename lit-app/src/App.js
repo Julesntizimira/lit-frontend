@@ -30,7 +30,7 @@ export default function App() {
           <Route path="payment" element={<Payment />}>
             <Route index element={<CreditCard />}/>
             <Route path="paypal" element={<CreditCard />}/>
-            <Route path="paypalcredit" element={<CreditCard />}/>
+            <Route path="mobilemoney" element={<CreditCard />}/>
           </Route>
         </Route>
       </Routes>
