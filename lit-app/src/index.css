@@ -446,7 +446,6 @@ nav > svg {
   gap: 0.5rem;
   cursor: pointer;
   min-width: 85px;
-  height: 100%;
 }
 
 .category-img-cont {
@@ -482,12 +481,13 @@ nav > svg {
   font-weight: 600;
   padding: 0 0 0.5rem;
   text-align: center;
+
 }
 .categories-wrapper{
   gap: 1rem;
   display: flex;
   overflow: scroll;
-  min-height: 135px;
+  /* min-height: 135px; */
 }
 
 
@@ -2052,9 +2052,6 @@ footer {
   }
 }
 @media (max-width: 600px) {
-  .category-container{
-    width: 85px;
-  }
   .card-container {
     width: 164px;
     min-width: 164px;
