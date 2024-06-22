@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import CartProductContainer from "./cartProductContainer";
-import Footer from "./footer";
-import { cart } from "./utils";
+import { cart } from "../utils";
+import { Link } from "react-router-dom";
+
 
 export default function Cart () {
     const [subTotal, setSubTotal] = useState(0);
@@ -16,7 +17,7 @@ export default function Cart () {
     return (
         <>
             <section className="cart-section">
-                <div className="cart-section-wrapper">
+                
                     <div className="cart-left-side">
                         <h2 className="section-title">Shopping Cart</h2>
                         <div className="cart-products">
@@ -58,12 +59,11 @@ export default function Cart () {
                                 </div>
                                 <h3>Total <span>${total}</span></h3>
                             </div>
-                            <button className="checkout btn">Checkout</button>
+                            <button className="checkout btn"><Link to="/payment">Checkout</Link></button>
                         </form>
                     </div>
-                </div>
+              
             </section>
-            <Footer />
         </>
     )
 }

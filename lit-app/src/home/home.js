@@ -1,7 +1,7 @@
 import AddSection from "./addSection";
 import CategoryContainer from "./categoryContainer";
 import Card from "./card";
-import { addOne, addtwo, cards, categories } from "./utils";
+import { addOne, addtwo, cards, categories } from "../utils";
 
 export default function Home () {
     return (

@@ -4,13 +4,13 @@ import Login from "./login";
 import Register from "./register"
 import Products from "./products/products";
 import Product from "./product";
-import Cart from "./cart";
+import Cart from "./cart/cart";
 import PaymentSteps from "./payment/paymentSteps";
 import SelectAddress from "./payment/selectAddress";
 import Shipping from "./payment/shipping";
 import Payment from "./payment/payment";
 import CreditCard from "./payment/creditcard";
-import Home from "./home";
+import Home from "./home/home";
 
 export default function App() {
   return (
@@ -20,10 +20,10 @@ export default function App() {
             <Route index element={<Home/>} />
             <Route path="products" element={<Products />}/>
             <Route path="product" element={<Product />}/>
+            <Route path="cart" element={<Cart />}/>
         </Route>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
-        <Route path="/cart" element={<Cart />}/>
         <Route path="/payment" element={<PaymentSteps />}>
           <Route index element={<SelectAddress />}/>
           <Route path="shipping" element={<Shipping />}/>

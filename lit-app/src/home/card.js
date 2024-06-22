@@ -20,7 +20,7 @@ export default function Card (props) {
             <div className="card-img-cont">
                 <img src={image_url} alt="product-thumbnail"/>
             </div>
-            <Link className="card-description">
+            <Link to="/product" className="card-description">
                 <p>{description}</p>
                 <p>{type}</p>
             </Link>

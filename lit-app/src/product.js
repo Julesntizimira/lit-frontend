@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "./card";
+import Card from "./home/card";
 import Path from "./products/path";
 import { cards } from "./utils";
 
@@ -19,7 +19,7 @@ export default function Product () {
                 "Apple",
                 "Iphone 14 Pro Max"
             ]}}/>
-            <section className="product-page-wrapper">
+            <section className="single-product-page-wrapper">
                 <div className="product-images">
                     <div className="small-images"> 
                         <div className="small-product-img">
@@ -142,9 +142,6 @@ export default function Product () {
                     </div>
                 </div>
             </section>
-            <div className="">
-
-            </div>
             <section className="details-section">
                 <div className="details-section-wrapper">
                     <div className="product-details-container">
@@ -206,8 +203,10 @@ export default function Product () {
                     <h2 className="section-title">Review</h2>
                     <div className="overall-rating-cont">
                         <div className="overall-rating">
-                            <span className="overall-rate">4.8</span>
-                            <span className="total-reviews">of 125 reviews</span>
+                            <div className="rate-reviews-cont">
+                                <span className="overall-rate">4.8</span>
+                                <span className="total-reviews">of 125 reviews</span>
+                            </div>
                             <div className="review-stars">
                                 <i className="fa-solid fa-star"></i>
                                 <i className="fa-solid fa-star"></i>

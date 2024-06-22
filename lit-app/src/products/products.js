@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "../card";
+import Card from "../home/card";
 import Path from "./path";
 import ProductFilter from "./productFilter";
 import { cards } from "../utils";
@@ -96,12 +96,17 @@ export default function Products () {
                 "Catalog",
                 "Smartphones"
             ]}}/>
-            <div className="product-page-wrapper">
+            <div className="products-page-wrapper">
                 <div className= {`side-bar ${sidebarVisible}`}>
                     <section className="filter">
-                        {/* <p>
-                            Filters
-                        </p> */}
+                        <p className="go-to-filters">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" onClick={() => {
+                               setSideBarVisible(prev => prev === "" ? "visible" : ""); 
+                            }}>
+                                <path d="M16.0001 20.7498C15.801 20.7508 15.61 20.6715 15.4701 20.5298L7.47007 12.5298C7.17762 12.237 7.17762 11.7627 7.47007 11.4698L15.4701 3.46985C15.7656 3.19449 16.2261 3.20261 16.5117 3.48823C16.7973 3.77384 16.8054 4.23434 16.5301 4.52985L9.06007 11.9998L16.5301 19.4698C16.8225 19.7627 16.8225 20.237 16.5301 20.5298C16.3902 20.6715 16.1991 20.7508 16.0001 20.7498Z" fill="black"/>
+                            </svg>
+                            <span>Filters</span>
+                        </p>
                         <h3 className="side-bar-section-title">
                             Price
                             <i className="fa-solid fa-angle-up"></i>

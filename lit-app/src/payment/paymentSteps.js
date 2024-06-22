@@ -6,7 +6,7 @@ export default function PaymentSteps() {
         <>
         <div className="payment-steps-wrapper">
             <div className="steps">
-                <NavLink to="">
+                <NavLink className={({isActive}) => isActive ? "active" : null} end to="">
                     <div className="step-container">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect width="24" height="24" rx="12" fill="black"/>
@@ -16,6 +16,7 @@ export default function PaymentSteps() {
                             <p className="step-number">Step 1</p>
                             <p className="step-name">Address</p>
                         </div>
+                        <div className="step-overlayer"></div>
                     </div>
                 </NavLink>
           
@@ -29,7 +30,7 @@ export default function PaymentSteps() {
                     </linearGradient>
                     </defs>
                 </svg>
-                <NavLink to="shipping">
+                <NavLink className={({isActive}) => isActive ? "active" : null} end to="shipping">
                     <div className="step-container">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect width="24" height="24" rx="12" fill="black"/>
@@ -39,6 +40,7 @@ export default function PaymentSteps() {
                             <p className="step-number">Step 2</p>
                             <p className="step-name">Shipping</p>
                         </div>
+                        <div className="step-overlayer"></div>
                     </div>
                 </NavLink>
               
@@ -52,7 +54,7 @@ export default function PaymentSteps() {
                     </linearGradient>
                     </defs>
                 </svg>
-                <NavLink to="payment">
+                <NavLink className={({isActive}) => isActive ? "active" : null} end to="payment">
                     <div className="step-container">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect width="24" height="24" rx="12" fill="black"/>
@@ -62,7 +64,9 @@ export default function PaymentSteps() {
                             <p className="step-number">Step 3</p>
                             <p className="step-name">Payment</p>
                         </div>
+                        <div className="step-overlayer"></div>
                     </div>
+                   
                 </NavLink>
            
             </div>
