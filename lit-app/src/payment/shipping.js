@@ -1,10 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Shipping() {
+    const navigate = useNavigate();
+    const handleNext = () => {
+      navigate("/payment/payment");
+    };
+    const handleBack = () => {
+        navigate("/payment");
+    };
     return (
         <section className="select-address-section">
               <div className="steps inside">
-                <NavLink className={({isActive}) => isActive ? "active" : null} end to="shipping">
+                <NavLink className={({isActive}) => isActive ? "active" : null} end to="">
                     <div className="step-container">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect width="24" height="24" rx="12" fill="black"/>
@@ -74,8 +81,8 @@ export default function Shipping() {
                 </form>
             </div>
             <div className="back-next-btns">
-                <button className="back-btn">Back</button>
-                <button className="next-btn">Next</button>
+                <button className="back-btn" onClick={handleBack}>Back</button>
+                <button className="next-btn" onClick={handleNext}>Next</button>
             </div>
         </section>
     )

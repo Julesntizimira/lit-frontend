@@ -1,6 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function SelectAddress() {
+    const navigate = useNavigate();
+    const handleNext = () => {
+      navigate("shipping");
+    };
+    const handleBack = () => {
+        navigate("/cart");
+    };
     return (
         <section className="select-address-section">
              <div className="steps inside">
@@ -73,8 +80,8 @@ export default function SelectAddress() {
                 <p>Add new Address</p>
             </div>
             <div className="back-next-btns">
-                <button className="back-btn">Back</button>
-                <button className="next-btn">Next</button>
+                <button className="back-btn" onClick={handleBack}>Back</button>
+                <button className="next-btn" onClick={handleNext}>Next</button>
             </div>
         </section>
     )

@@ -11,7 +11,7 @@ export default function Payment() {
         <section className="payment-section">
             <div className="payment-left-side">
                 <div className="steps inside">
-                    <NavLink className={({isActive}) => isActive ? "active" : null} end to="shipping">
+                    <NavLink className={({isActive}) => isActive ? "active" : null} end to="/payment/shipping">
                         <div className="step-container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <rect width="24" height="24" rx="12" fill="black"/>
@@ -34,7 +34,7 @@ export default function Payment() {
                         </linearGradient>
                         </defs>
                     </svg>
-                    <NavLink className={({isActive}) => isActive ? "active" : null} end to="/payment">
+                    <NavLink className={({isActive}) => isActive ? "active" : null} end to="">
                         <div className="step-container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <rect width="24" height="24" rx="12" fill="black"/>

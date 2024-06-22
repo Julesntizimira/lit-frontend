@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CartProductContainer from "./cartProductContainer";
 import { cart } from "../utils";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Cart () {
@@ -14,6 +14,11 @@ export default function Cart () {
     useEffect(() => {
         setSubTotal(price)
     }, [price])
+
+    const navigate = useNavigate();
+    const handleCheckout = () => {
+      navigate("/payment");
+    };
     return (
         <>
             <section className="cart-section">
@@ -59,7 +64,7 @@ export default function Cart () {
                                 </div>
                                 <h3>Total <span>${total}</span></h3>
                             </div>
-                            <button className="checkout btn"><Link to="/payment">Checkout</Link></button>
+                            <button className="checkout btn" onClick={handleCheckout}>Checkout</button>
                         </form>
                     </div>
               

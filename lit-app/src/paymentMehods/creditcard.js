@@ -26,7 +26,7 @@ export default function CreditCard() {
             </form>
             <div className="back-next-btns payment-btns">
                 <button className="back-btn">Back</button>
-                <button className="next-btn">Next</button>
+                <button className="next-btn">Pay</button>
             </div>
         </>
     )
