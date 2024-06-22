@@ -6,7 +6,7 @@ export const footerColumns = [
                 name: "Registration",
             },
             {
-                name: "eBay Money Back Guarantee",
+                name: "Money Back Guarantee",
             },
             {
                 name: "Bidding & buying help",
