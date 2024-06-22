@@ -1991,8 +1991,21 @@ footer {
     width: auto;
     margin-right: 2rem;
   }
+
+  /*select address */
   .back-next-btns{
     justify-content: center;
+    gap: 0.5rem
+  }
+
+  /* shipping */
+  .method-content {
+    flex-direction: column;
+    align-items: start;
+    max-width: 50%;
+  }
+  .method-container {
+    height: auto;
   }
 }
 @media (max-width: 600px) {
