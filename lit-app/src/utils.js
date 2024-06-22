@@ -2050,7 +2050,7 @@ export const categories = [
   },
   {
       image_url: "preloved.jpg",
-      categoryName: "Pre-loved Luxury"
+      categoryName: "Pre-loved"
   },
   {
       image_url: "toys.jpg",
