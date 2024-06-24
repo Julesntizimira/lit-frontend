@@ -16,7 +16,7 @@ export default function PromotionAdd() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIndex(prevIndex => (prevIndex + 1) % promoAdsArray.length);
-        }, 3000); // 3000 milliseconds = 3 seconds
+        }, 5000); // 3000 milliseconds = 3 seconds
 
         // Cleanup function to clear the timeout if the component is unmounted
         return () => clearTimeout(timer);

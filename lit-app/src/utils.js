@@ -2091,10 +2091,10 @@ export const navItems = [
   {
       category: "Fashion",
       subCategories: [
-          "Men",
-          "Women",
-          "Kids",
-          "Jewllery & Watches"
+        "Men",
+        "Women",
+        "Kids",
+        "Jewllery & Watches"
       ]
   },
   {
