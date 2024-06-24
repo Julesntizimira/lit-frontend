@@ -2064,12 +2064,20 @@ footer {
   /* contact */
   .contact-page-wrapper {
     flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
   }
   .support-form  {
     width: 100%;
   }
   .support-form-inputs {
     flex-direction: column;
+  }
+  .support-send-msg-button  {
+    font-size: 14px;
+    width: 180px;
+    height: 48px;
   }
 
 }
