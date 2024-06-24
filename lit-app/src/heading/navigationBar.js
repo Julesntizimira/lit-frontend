@@ -12,6 +12,10 @@ export default function NavigationBar () {
             link: ""
         },
         {
+            item: "Account",
+            link: "/account"
+        },
+        {
             item:  "Sell",
             link: ""
         },

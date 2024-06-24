@@ -12,6 +12,7 @@ import Payment from "./payment/payment";
 import CreditCard from "./paymentMehods/creditcard";
 import Home from "./home/home";
 import Contact from "./contact";
+import Account from "./account";
 
 export default function App() {
   return (
@@ -34,9 +35,8 @@ export default function App() {
             <Route path="login" element={<Login />}/>
             <Route path="register" element={<Register />}/>
             <Route path="contact" element={< Contact />} />
+            <Route path="account" element={< Account />} />
         </Route>
-        
-       
       </Routes>
     </BrowserRouter>
   );

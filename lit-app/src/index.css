@@ -96,7 +96,10 @@ nav,
 .contact-page-wrapper,
 .contacts-container-titles,
 .support-form-inputs,
-.products-in-stock
+.products-in-stock,
+.account-page-wrapper,
+.profile-form-inputs-cont,
+.profile-form-btn
 {
   display: flex;
   justify-content: center;
@@ -117,7 +120,12 @@ nav,
 .payment-right-side,
 .contacts-container,
 .support-method-container,
-.support-form
+.support-form,
+.profile-form,
+.account-munu-container,
+.account-menu,
+.reset-password-inputs-cont,
+.profile-form-inputs-cont label
 {
   display: flex;
   flex-direction: column;
@@ -133,7 +141,8 @@ nav, .add-section,
 .products-page-wrapper, 
 .single-product-page-wrapper, 
 .details-section, 
-.review-section{
+.review-section
+{
   padding: 0 3rem;
 }
 
@@ -1850,6 +1859,100 @@ footer {
 
 
 
+/* Account */
+.account-page-wrapper {
+  padding: 3rem;
+  gap: 3rem;
+  align-items: start;
+}
+.account-menu {
+  align-items: start;
+  gap: 1rem;
+}
+
+.account-munu-container {
+  gap: 0.5rem;
+  align-items: start;
+}
+.account-munu-container h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+
+}
+.account-munu-container a {
+  padding-left: 2rem;
+  color: #5a5a5a;
+  font-size: 14px;
+}
+.account-munu-container a:hover {
+  text-decoration: underline;
+}
+
+
+.account-right-container {
+  width: 870px;
+  max-width: 100%;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.041), 0 6px 20px rgba(0, 0, 0, 0.041);
+}
+
+
+.profile-form  {
+  width: 100%;
+  align-items: start;
+  gap: 1.5rem;
+}
+.profile-form-inputs-cont {
+  width: 100%;
+  gap: 2rem;
+}
+.profile-form-inputs-cont label{
+  align-items: start;
+  width: 100%;
+  gap: 0.5rem;
+}
+.profile-form input {
+  height: 50px;
+  background-color: #F5F5F5;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: 14px;
+}
+.profile-form h3 {
+  font-weight: 500;
+  color: #DB4444;
+  font-size: 18px;
+}
+.reset-password-inputs-cont {
+  width: 100%;
+  gap: 1rem;
+  align-items: start;
+}
+.profile-form-btn button{
+  height: 56px;
+  width: 214px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.profile-form-btn {
+  width: 100%;
+  justify-content: flex-end;
+}
+.profile-change-btn {
+  background-color: #DB4444;
+  color: white;
+  border: none;
+}
+.reset-btn {
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+}
+
+
 
 
 
@@ -1914,6 +2017,7 @@ footer {
   .payment-steps-wrapper,
   .form-wrapper,
   .contact-page-wrapper,
+  .account-page-wrapper,
   footer{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1963,6 +2067,7 @@ footer {
   .payment-steps-wrapper,
   .form-wrapper,
   .contact-page-wrapper,
+  .account-page-wrapper,
   footer{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2164,7 +2269,24 @@ footer {
   .login-img-cont {
     display: none;
   }
+
+  /* account */
+  .account-page-wrapper {
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .account-menu {
+    padding-left: 2rem;
+  }
+  .profile-form-btn button {
+    height: 40px;
+    font-size: 14px;
+  }
 }
+
+
+
 @media (max-width: 600px) {
   .card-container {
     width: 164px;
@@ -2215,4 +2337,9 @@ footer {
  .cart-right-side {
   padding: 4rem 1rem;
 }
+
+  /* account */
+  .profile-form-inputs-cont {
+    flex-direction: column;
+  }
 }
