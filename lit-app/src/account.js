@@ -28,6 +28,7 @@ export default function Account() {
                             <input 
                                 id="profile-firstname"
                                 placeholder="Md"
+                                type="text"
                             />
                         </label>
                         <label>
@@ -35,6 +36,7 @@ export default function Account() {
                             <input 
                                     id="profile-lastname"
                                     placeholder="Rimel"
+                                    type="text"
                                 />
                         </label>
                     </div>
@@ -43,6 +45,7 @@ export default function Account() {
                             Email
                             <input 
                                 id="profile-email"
+                                type="email"
                                 placeholder="rimel1111@gmail.com"
                             />
                         </label>
@@ -58,12 +61,15 @@ export default function Account() {
                             <p>Password changes</p>
                             <input
                                 placeholder="Current Password"
+                                type="password"
                             />
                             <input
                                 placeholder="New Password"
+                                type="password"
                             />
                             <input
                                 placeholder="Confirm Password"
+                                type="password"
                             />
                     </div>
                     <div className="profile-form-btn">

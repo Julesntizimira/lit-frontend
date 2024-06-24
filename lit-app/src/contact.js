@@ -39,6 +39,7 @@ export default function Contact() {
                             placeholder="Your Name"
                             id="name"
                             name="name"
+                            required
                         />
                 
                         <input 
@@ -46,6 +47,7 @@ export default function Contact() {
                             id="email"
                             name="email"
                             type="email"
+                            required
                         />
                 
                         <input 
@@ -53,6 +55,7 @@ export default function Contact() {
                             id="phone"
                             name="phone"
                             type="tel"
+                            required
                         />
                     </div>
                     <textarea id=""></textarea>
