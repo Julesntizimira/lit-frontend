@@ -5,7 +5,7 @@ export default function NavigationBar () {
     const navBarItems = [
         {
             item: "Home",
-            link: ""
+            link: "/"
         },
         {
             item: "About",
