@@ -65,6 +65,11 @@ export default function Product () {
                             <div className="color-cont"></div>
                         </div>
                     </div>
+                    <div className="products-in-stock">
+                        <p className="in-stock">5 In Stock</p>
+                        <p className="sold-products">20 Sold</p>
+                    </div>
+
                     <div className="product-capacity">
                         <p className="capacity">128GB</p>
                         <p className="capacity">256GB</p>

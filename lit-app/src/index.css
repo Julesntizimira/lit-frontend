@@ -95,9 +95,8 @@ nav,
 .payment-tab-img-cont,
 .contact-page-wrapper,
 .contacts-container-titles,
-.support-form-inputs
-/* .left-side-to-filter,
-.right-side-to-rating */
+.support-form-inputs,
+.products-in-stock
 {
   display: flex;
   justify-content: center;
@@ -1112,6 +1111,18 @@ footer {
   height: 2rem;
   background-color: #DB4444;
   border-radius: 50%;
+}
+.products-in-stock {
+  justify-content: flex-start;
+  gap: 2rem
+}
+.in-stock {
+  color: var(--hover-blue);
+  font-size: 14px;
+}
+.sold-products {
+  color: #DB4444;
+  font-size: 14px;
 }
 .capacity {
   width: 94px;
