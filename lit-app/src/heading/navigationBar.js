@@ -3,11 +3,27 @@ import {Link, NavLink} from "react-router-dom"
 
 export default function NavigationBar () {
     const navBarItems = [
-        "Home",
-        "About",
-        "Sell",
-        "Help & Contact",
-        "Money Back Guarnty"
+        {
+            item: "Home",
+            link: ""
+        },
+        {
+            item: "About",
+            link: ""
+        },
+        {
+            item:  "Sell",
+            link: ""
+        },
+        {
+            item:  "Help & Contact",
+            link: "/contact"
+        },
+        {
+            item:  "Money Back Guarnty",
+            link: ""
+        }
+       
     ]
     const [menuDropdownStyle, setMenuDropDown] = useState("none");
 
@@ -17,8 +33,8 @@ export default function NavigationBar () {
                 {navBarItems.map((item) => {
                     return(
                         <li>
-                            <NavLink className="nav-link" to="">
-                                {item}
+                            <NavLink className="nav-link" to={item.link}>
+                                {item.item}
                             </NavLink>
 
                             {/* <ul className="nav-dropdown">
@@ -59,7 +75,7 @@ export default function NavigationBar () {
                             <li  onClick={() => {
                                 setMenuDropDown(prev => prev === "none" ? "flex" : "none");
                             }}>
-                                <Link to="/">{item}</Link>
+                                <Link to={item.link}>{item.item}</Link>
                             </li>
                         )
                     })

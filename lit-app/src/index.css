@@ -1811,6 +1811,7 @@ footer {
 }
 .support-form-inputs {
   width: 100%;
+  gap: 1rem;
 }
 .support-form-inputs input, .support-form  textarea {
   background-color: #F5F5F5;
