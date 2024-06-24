@@ -1,15 +1,40 @@
 import { Link } from "react-router-dom";
 
+
 export default function SearchBar() {
+    // const [menuDropdownStyle, setMenuDropDown] = useState("none");
     return (
         <div className="search-bar-wrapper">
             <div className="search-bar">
                 {/* <div className="logo-cont">
                     <img src="./images/logos/ebay.png" alt="company-logo"/>
                 </div> */}
-                {/* <div className="category-filter">
+                {/* <div className="category-filter" onClick={() => {
+                    setMenuDropDown(prev => prev === "none" ? "flex" : "none");
+                }}>
                     <span>Shop by category</span>
                     <i class="fa-solid fa-angle-down"></i>
+                    <ul className="menu-dropdown" style={{
+                        display: menuDropdownStyle
+                    }}>
+                        <p className="menu-dropdown-title">Categories</p>
+                        {
+                            navItems.map((item) => {
+                                return (
+                                    <li  onClick={() => {
+                                        setMenuDropDown(prev => prev === "none" ? "flex" : "none");
+                                    }}>
+                                        <Link to="/">{item.category}</Link>
+                                    </li>
+                                )
+                            })
+                        }
+                        <li onClick={() => {
+                                setMenuDropDown(prev => prev === "none" ? "flex" : "none");
+                            }}>
+                            <Link to="products">products</Link>
+                        </li>
+                    </ul>
                 </div> */}
                 <div className="search-input-cont">
                     <div className="search-icon-cont one">

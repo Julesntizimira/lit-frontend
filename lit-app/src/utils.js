@@ -2086,3 +2086,111 @@ export const addtwo = {
       color: "white"
   }
 }
+
+export const navItems = [
+  {
+      category: "Fashion",
+      subCategories: [
+          "Men",
+          "Women",
+          "Kids",
+          "Jewllery & Watches"
+      ]
+  },
+  {
+      category:"Electronics",
+      subCategories: [
+          "Computers & Accessories",
+          "Mobile Phones & Accessories",
+          "TV & Home Entertainment",
+          "Cameras & Photography",
+          "Audio Equipment",
+          "Wearable Technology",
+          "Home Appliances"
+      ]
+  },
+  {
+      category:"Health & Beauty",
+      subCategories: [
+          "Skincare",
+          "Haircare",
+          "Makeup",
+          "Personal Care",
+          "Health Devices",
+          "Nutrition & Supplements",
+      ]
+  },
+  {
+      category: "Baby Products",
+      subCategories: [
+          "Baby Gear",
+          "Baby Clothing",
+          "Feeding",
+          "Nursery"
+      ]
+  },
+  {
+      category: "Home & Kitchen",
+      subCategories: [
+          "Kitchen & Dining",
+          "Furniture",
+          "Bedding",
+          "Home Decor",
+          "Storage & Organization",
+          "Home Improvement",
+          "Garden and Outdoor"
+      ]
+  },
+  {
+      category: "Sports",
+      subCategories: [
+          "Exercise & Fitness",
+          "Outdoor Recreation",
+          "Sports Equipment",
+          "Apparel & Footwear"
+      ]
+  },
+  {
+      category: "Books & Hobbies",
+      subCategories: [
+          "Books",
+          "Musical Instruments",
+          "Board Games & Puzzles",
+          "Hobbies",
+          "Crafts and Sewing"
+      ]
+  },
+  {
+      category: "Groceries",
+      subCategories: [
+          "Beverages",
+          "Snacks",
+          "Pantry Staples",
+          "Gourmet Food"
+      ]
+  },
+  {
+      category: "Pets",
+      subCategories: [
+          "Dog Supplies",
+          "Cat Supplies",
+          "Fish & Aquatic",
+          "Small Animals",
+          "Bird Supplies"
+      ]
+  },
+  {
+      category: "Motors",
+      subCategories: [
+          "Automotive",
+          "Motorcycles"
+      ]
+  },
+  {
+      category: "Real Estate",
+      subCategories: [
+          "Residential",
+          "Commercial"
+      ]
+  }
+]

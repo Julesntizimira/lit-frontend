@@ -9,8 +9,9 @@ export default function Layout () {
         <>
             <div className="heading">
                 <PromotionAdd />
-                <SearchBar />
+         
                 <NavigationBar />
+                <SearchBar />
             </div>
          
             <main className="layout-main">
