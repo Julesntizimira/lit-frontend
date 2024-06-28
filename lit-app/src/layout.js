@@ -9,7 +9,6 @@ export default function Layout () {
         <>
             <div className="heading">
                 <PromotionAdd />
-         
                 <NavigationBar />
                 <SearchBar />
             </div>
