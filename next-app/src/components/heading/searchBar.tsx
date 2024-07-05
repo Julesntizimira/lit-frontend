@@ -1,10 +1,41 @@
 "use client"
 
+import axios from "axios";
 import Link from "next/link"
+import { useEffect, useRef, useState } from "react"
+import { useRouter } from "next/navigation";
 
 
 export default function SearchBar() {
+    const router = useRouter();
     // const [menuDropdownStyle, setMenuDropDown] = useState("none");
+    const [profileDropdownStyle, setProfileDropdownStyle] = useState<string | null>(null);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    const handleDocumentClick = (event: MouseEvent) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            setProfileDropdownStyle(null);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleDocumentClick);
+
+        return () => {
+            document.removeEventListener('click', handleDocumentClick);
+        };
+    }, []);
+
+    async function  handleLogout(event: React.MouseEvent) {
+        try {
+            
+            // await axios.get("api/users/logout");
+            router.push("/login");
+        } catch (error: any) {
+            console.log(error.message)
+        }
+    }
+    
     return (
         <div className="search-bar-wrapper">
             <div className="search-bar">
@@ -56,12 +87,34 @@ export default function SearchBar() {
                     <button className="search-btn">Search</button>
                 </div>
                 <div className="personalized">
-                    <Link className="home-login-link" href="/login">
-                        <span>Login/SignUp</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                    <div className="home-login-link">
+                        {/* <Link href="/login">Login/SignUp</Link> */}
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
                             <path d="M24 27V24.3333C24 22.9188 23.5224 21.5623 22.6722 20.5621C21.8221 19.5619 20.669 19 19.4667 19H11.5333C10.331 19 9.17795 19.5619 8.32778 20.5621C7.47762 21.5623 7 22.9188 7 24.3333V27M21 9.5C21 11.9853 18.9853 14 16.5 14C14.0147 14 12 11.9853 12 9.5C12 7.01472 14.0147 5 16.5 5C18.9853 5 21 7.01472 21 9.5Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </Link>
+                        </svg> 
+                        </div>
+                        */}
+                        <div className="user-photo-cont-small" ref={dropdownRef} onClick={() => {
+                            setProfileDropdownStyle(prev => prev === "active" ? null : "active");
+                        }}>
+                            <img src="images/profilePic/jules.jpg" alt="profile-pic"/>
+                        </div>
+                        <ul className={`profile-drop-down ${profileDropdownStyle}`}>
+                            <li>
+                                <Link href="/account">Account</Link>
+                            </li>
+                            <li>
+                                <Link href="#">Wishlist</Link>
+                            </li>
+                            <li>
+                                <Link href="#">Orders</Link>
+                            </li>
+                            <li onClick={handleLogout}>
+                                <Link href="#">Logout</Link>
+                            </li>
+                        </ul>
+                      
+                    </div>
                     <Link className="notification-bell" href="">
                         <i className="fa-regular fa-bell"></i>
                     </Link>

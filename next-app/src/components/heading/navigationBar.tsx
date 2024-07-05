@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function NavigationBar () {
@@ -13,10 +13,6 @@ export default function NavigationBar () {
         {
             item: "About",
             link: ""
-        },
-        {
-            item: "Account",
-            link: "/account"
         },
         {
             item:  "Sell",
@@ -32,7 +28,24 @@ export default function NavigationBar () {
         }
        
     ]
-    const [menuDropdownStyle, setMenuDropDown] = useState("none");
+    const [menuDropdownStyle, setMenuDropDown] = useState<string | null>(null);
+
+    const dropdownRef = useRef<SVGSVGElement>(null);
+    const handleDocumentClick = (event: MouseEvent) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            setMenuDropDown(null);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleDocumentClick);
+
+        return () => {
+            document.removeEventListener('click', handleDocumentClick);
+        };
+    }, []);
+
+
 
     return (
         <nav>
@@ -49,9 +62,9 @@ export default function NavigationBar () {
                 })
                 }
             </ul>
-            <svg
+            <svg ref={dropdownRef}
                 onClick={() => {
-                    setMenuDropDown(prev => prev === "none" ? "flex" : "none");
+                    setMenuDropDown(prev => prev === "active" ? null : "active");
                 }}
                  xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                 <path fillRule="evenodd" clipRule="evenodd" d="M32.5 13.75H7.5V11.25H32.5V13.75Z" fill="black"/>
@@ -59,15 +72,14 @@ export default function NavigationBar () {
                 <path fillRule="evenodd" clipRule="evenodd" d="M32.5 28.75H7.5V26.25H32.5V28.75Z" fill="black"
             />
             </svg>
-            <ul className="menu-dropdown" style={{
-                display: menuDropdownStyle
-            }}>
+            <ul className={`menu-dropdown ${menuDropdownStyle}`}>
+
                 <p className="menu-dropdown-title">Menu</p>
                 {
                     navBarItems.map((item) => {
                         return (
                             <li key={key} onClick={() => {
-                                setMenuDropDown(prev => prev === "none" ? "flex" : "none");
+                                setMenuDropDown(null);
                             }}>
                                 <Link href={item.link}>{item.item}</Link>
                             </li>

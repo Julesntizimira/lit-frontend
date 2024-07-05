@@ -4,8 +4,8 @@ import Card from "@/components/home/card";
 import Pagination from "@/components/products/pagination";
 import Path from "@/components/products/path";
 import ProductFilter from "@/components/products/productFilter";
-import { cards } from "@/components/utils";
-import { useState } from "react";
+import customFetch from "@/helpers/customFetch";
+import { useEffect, useState } from "react";
 
 export default function ProductsPage () {
     const key = 0
@@ -81,18 +81,31 @@ export default function ProductsPage () {
             ]
         }
     ]
+
+    const [ cards, setCards ] = useState([]);
+    const [totalPosts, setTotalPosts] = useState(0);        
+
+    useEffect(() => {
+        customFetch("api/cards", "failed to fetch cards", setCards);
+    }, [])
+
+    useEffect(() => {
+        setTotalPosts(cards.length);
+    }, [cards])
+
     const [currentPage, setCurrentPage] = useState(1);
     // const [perPage, setPerPage] = useState(9);
     const perPage = 9;
 
     const endIndex = currentPage * perPage;
     const startIndex = endIndex - perPage;
-    const totalPosts = cards.length;
     const pageData = cards.slice(startIndex, endIndex);
 
     const [sidebarVisible, setSideBarVisible] = useState("");
-  
 
+
+
+    
     return (
         <>
             <Path container={{path: [

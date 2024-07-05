@@ -3,10 +3,37 @@
 import AddSection from "@/components/home/addSection"
 import Card from "@/components/home/card";
 import CategoryContainer from "@/components/home/categoryContainer"
-import { addOne, addtwo, cards, categories } from "@/components/utils"
+import { addOne, addtwo } from "@/components/utils"
+import { useEffect, useState } from "react";
+import customFetch from "@/helpers/customFetch";
+import { doGetSession } from "../actions";
+import { useRouter } from "next/navigation";
+
 
 export default function HomePage () {
+    const router = useRouter()
     const key = 0;
+
+    const [categories, setCategories] = useState([]);
+    const [cards, setCards] = useState([]);
+
+    useEffect(() => {
+
+        customFetch("api/categories", "failed to fetch categories", setCategories);
+        customFetch("api/cards", "failed to fetch cards", setCards);
+    }, [])
+
+
+
+    // const dbPopulate = async () => {
+    //     try {
+    //         const response = await axios.get("api/populate");
+    //         console.log(response.data);
+    //     } catch (error) {
+    //         console.log("client failed to populate database" + error);
+    //     }
+    // }
+    
     return (
         <>
             <AddSection container={addOne}/>
@@ -16,9 +43,9 @@ export default function HomePage () {
             
                     <div className="categories-wrapper">
                     {
-                        categories.map((category) => {
+                        categories.map((category: any) => {
                             return(
-                                <CategoryContainer key={key} img={category.image_url} categoryName={category.categoryName} />
+                                <CategoryContainer key={key} img={category.image_url} categoryName={category.name} />
                             )
                         })
                     }
@@ -76,6 +103,8 @@ export default function HomePage () {
                     </div>
                 </div>
             </section>
+            {/* <script async data-id="8717655548" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script> */}
+            {/* <button onClick={dbPopulate}>database populate</button> */}
         </>
     )
 }

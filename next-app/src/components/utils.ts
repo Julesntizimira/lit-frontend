@@ -2057,10 +2057,6 @@ export const categories = [
       categoryName: "Toys"
   }
 ]
-
-
-
-
 export const addOne = {
   title: "On the road in comfort and style",
   paragraph: "Equip your vehicle for the adventure of a lifetime.",
@@ -2090,9 +2086,6 @@ export const addtwo = {
       color: "white"
   }
 }
-
-
-
 
 export const navItems = [
   {

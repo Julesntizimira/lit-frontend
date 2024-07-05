@@ -6,7 +6,11 @@ export default function  Pagination (props: any) {
     let pages = [];
     const totalPages = Math.ceil(totalPosts/perPage);
     const [currentPageIntervalStart, setCurrentPageIntervalStart] = useState(1)
-    const [currentPageIntervalEnd, setCurrentPageIntervalEnd] = useState(5 < totalPages ? 5 : totalPages)
+    const [currentPageIntervalEnd, setCurrentPageIntervalEnd] = useState(5 > totalPages ? 5 : totalPages)
+
+    console.log(currentPageIntervalEnd);
+    console.log(totalPages);
+
 
     for(let i = currentPageIntervalStart; i <= currentPageIntervalEnd; i++) {
         pages.push(i);
@@ -15,6 +19,7 @@ export default function  Pagination (props: any) {
         pages.push("...");
         pages.push(totalPages);
     }
+   
 
     
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 export default function Card (props: any) {
-    const { price, description, type, image_url } = props.container
+    const { price, name, image_url } = props.container
     const [fillColor, setFillColor] = useState("none");
     const [strokeColor, setStrokeColor] = useState("#191919");
     return (
@@ -24,11 +24,11 @@ export default function Card (props: any) {
                 <img src={image_url} alt="product-thumbnail"/>
             </div>
             <Link href="/product" className="card-description">
-                <p>{description}</p>
-                <p>{type}</p>
+                <p>{name}</p>
+                {/* <p>{type}</p> */}
             </Link>
             <div className="card-price-btn-container">
-                <p className="card-price">{price}</p>
+                <p className="card-price">${price}</p>
                 <button>Buy now</button>
             </div>
         </div>

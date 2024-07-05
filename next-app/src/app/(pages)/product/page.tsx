@@ -3,8 +3,8 @@
 
 import Card from "@/components/home/card";
 import Path from "@/components/products/path";
-import { cards } from "@/components/utils";
-import { useState } from "react";
+import customFetch from "@/helpers/customFetch";
+import { useEffect, useState } from "react";
 
 export default function Product () {
     const key = 0;
@@ -15,7 +15,13 @@ export default function Product () {
     const [reviewsHeight, setReviewsHeight] = useState("856px");
     const [viewMoreBtn, setViewMoreBtn] = useState("View More");
     
-    const [imgPath, setImgPath] = useState("img")
+    const [imgPath, setImgPath] = useState("img");
+
+    const [ cards, setCards ] = useState([]);
+
+    useEffect(() => {
+        customFetch("api/cards", "failed to fetch cards", setCards);
+    }, [])
     return (
         <>
             <Path container={{path: [

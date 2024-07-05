@@ -1,8 +1,31 @@
 "use client"
 import Link from "next/link";
+import {auth} from "@/auth";
+import { useEffect, useState } from "react";
+import { redirect } from "next/navigation";
+import { doGetSession } from "@/app/actions";
+import { useRouter } from "next/navigation";
 
 
-export default function Account() {
+export default function Account () {
+    const router = useRouter();
+    const [user, setUser] = useState<any>(null);
+    useEffect(() => {
+         doGetSession()
+         .then((data) => {
+                if(!data) {
+                    router.push("/login");
+                } 
+                else {
+                    setUser(data);
+                }
+         })
+    }, [])
+
+    if(!user) {
+        return null;
+    }
+
     return (
         <div className="account-page-wrapper">
             <div className="account-menu active">
@@ -29,7 +52,7 @@ export default function Account() {
                             First Name
                             <input 
                                 id="profile-firstname"
-                                placeholder="Md"
+                                placeholder={user?.firstname}
                                 type="text"
                             />
                         </label>
@@ -37,7 +60,7 @@ export default function Account() {
                             Last Name
                             <input 
                                     id="profile-lastname"
-                                    placeholder="Rimel"
+                                    placeholder={user?.lastname}
                                     type="text"
                                 />
                         </label>
@@ -48,7 +71,7 @@ export default function Account() {
                             <input 
                                 id="profile-email"
                                 type="email"
-                                placeholder="rimel1111@gmail.com"
+                                placeholder={user?.email}
                             />
                         </label>
                         <label>
